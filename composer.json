@@ -1,5 +1,5 @@
 {
-	"name"        : "themehybrid/hybrid-core",
+	"name"        : "blush-dev/blush",
 	"autoload"    : {
 		"psr-4" : {
 			"Blush\\" : "src/"
