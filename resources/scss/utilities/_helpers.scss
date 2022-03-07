@@ -1,0 +1,41 @@
+////
+/// Helper classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/mythic
+////
+
+:first-child {
+	margin-top: 0;
+}
+
+h1 + *,
+h2 + *,
+h3 + *,
+h4 + *,
+h5 + *,
+h6 + * {
+	margin-top: 0;
+}
+
+/// Clear floats.
+
+.clear {
+	clear: both;
+}
+
+// Used for small images that are possibly something like a smiley, transparent
+// PNG, and so on where we don't want borders.
+.is-borderless {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+// Used for paragraphs that only contain an image. These have no height. We use
+// JS to add the `.is-collapsed` class and remove any margins and paddings.
+.is-collapsed {
+	//margin: 0;
+	//padding: 0;
+}

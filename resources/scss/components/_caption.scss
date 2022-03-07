@@ -1,0 +1,10 @@
+
+.wp-caption {
+
+	&-text {
+		padding: 0 2rem;
+		text-align: center;
+		font-family: $font-family-secondary;
+		color: $gray-600;
+	}
+}

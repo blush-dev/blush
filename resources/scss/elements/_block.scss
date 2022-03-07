@@ -1,0 +1,23 @@
+
+// Margin for all block-level elements not covered elsewhere.
+p,
+hr,
+address,
+table,
+figure {
+	margin-top: $spacing-global;
+}
+
+// Paragraphs.
+p {
+	&:empty {
+		display: none;
+	}
+}
+
+// Horizontal rules.
+hr {
+	height:     0;
+	border:     none;
+	border-top: 3px dashed $gray-300;
+}

@@ -1,0 +1,67 @@
+// Quotes.
+
+blockquote {
+	border-left: 3px solid #e5e5e5;
+        font-style: italic;
+	margin-top: $spacing-global;
+        padding: 0 $spacing-global;
+        position: relative;
+        z-index: 0;
+	color: #4a5568;
+
+	.entry__content & {
+		max-width: $max-w-2xl;
+
+		@media only screen and ( min-width: $content-width-padded ) {
+			max-width: $max-w-3xl;
+		}
+	}
+
+	&::before {
+		content: "";
+	        position: absolute;
+	        top: 50%;
+	        left: -4px;
+	        height: 3rem;
+	        background-color: #fff;
+	        width: 5px;
+		margin-top: -1.5rem;
+	}
+
+	&::after {
+		content: "\201D";
+		position: absolute;
+		top: 50%;
+		left: -0.5em;
+		font-style: normal;
+		font-size: 5rem;
+		line-height: 1;
+		text-align: center;
+		text-indent: -2px;
+		width: 1em;
+		margin-top: -1.25rem;
+		color: #2c5282;
+	}
+
+	i,
+	em,
+	cite { font-style : normal; }
+
+	.has-cite {
+		margin-top: 1rem;
+		//text-align: center;
+	}
+
+	cite {
+		font-size: 1.25rem;
+		font-variant: small-caps;
+		color: #718096;
+	}
+
+	//cite,
+	//footer { font-family : $font_secondary; }
+}
+
+
+// Inline quotes.
+q { quotes : '\201C' '\201D' '\2018' '\2019'; }

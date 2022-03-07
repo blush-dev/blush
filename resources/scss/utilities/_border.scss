@@ -1,0 +1,87 @@
+////
+/// Border helper classes.
+///
+/// @group  Utilities
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+.border-current {
+	border-color: currentColor;
+}
+
+@each $color-name, $color-value in colors() {
+
+	.border-#{ $color-name } {
+		border-color: $color-value;
+	}
+
+}
+
+$border-width: (
+	'':   1px,
+	'-0': 0,
+	'-2': 0.125rem,
+	'-4': 0.25rem,
+//	-8: 0.5rem
+);
+
+@each $name, $value in $border-width {
+	.border#{ $name } {
+		border-width: $value;
+	}
+}
+
+@each $side, $position in ( t: top, r: right, b: bottom, l: left ) {
+
+	@each $name, $value in $border-width {
+		.border-#{ $side }#{ $name } {
+			border-#{ $position }-width: $value;
+		}
+	}
+}
+
+@each $prefix, $breakpoint in ( sm: $breakpoint-sm, md: $breakpoint-md ) {
+
+	@media ( min-width: $breakpoint ) {
+
+		@each $name, $value in $border-width {
+			.#{ $prefix }\:border#{ $name } {
+				border-width: $value;
+			}
+		}
+	}
+}
+
+$border-style: (
+	border-solid:  solid,
+	border-dashed: dashed,
+	border-dotted: dotted,
+	border-none:   none
+);
+
+@each $name, $value in $border-style {
+	.#{ $name } {
+		border-style: $value;
+	}
+}
+
+$border-radius: (
+	none: $rounded-none,
+	sm:   $rounded-sm,
+	md:   $rounded-md,
+	lg:   $rounded-lg,
+	xl:   $rounded-xl
+);
+
+// Border Radius.
+
+@each $radius-name, $radius-value in $border-radius {
+	.rounded-#{ $radius-name } {
+		border-radius: #{ $radius-value }
+	}
+}
+
+.rounded-full {
+	border-radius: 50%;
+}

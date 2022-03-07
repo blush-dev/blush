@@ -1,0 +1,68 @@
+
+.block-grid {
+	margin-top: $spacing-global;
+	display: grid;
+	gap: $spacing-half;
+
+	&.alignfull {
+		padding: 0 $spacing-half;
+	}
+
+	@media ( max-width: $width-alignwide + $spacing-2x ) {
+
+		&.alignfull,
+		&.alignwide {
+			padding: 0 $spacing-global;
+		}
+	}
+}
+
+// The wrapper for individual gallery images/figures.
+.block-grid {
+
+	> * {
+		height: 100%;
+		display:         flex;
+		flex-grow:       1;
+		flex-direction:  column;
+		justify-content: center;
+		position:        relative;
+		margin:          0;
+		padding:         0;
+	}
+
+	img {
+		display:   block;
+		max-width: 100%;
+		height:    auto;
+		width:     auto;
+	}
+
+	figcaption {
+		box-sizing: border-box;
+		position:   absolute;
+		bottom:     0;
+		width:      100%;
+		max-height: 100%;
+		padding:    40px $spacing-half $spacing-fourth;
+		font-size:  1rem;
+		color:      $white;
+		background: linear-gradient(
+			0deg,
+			rgba( 0, 0, 0, 0.7 ) 0,
+			rgba( 0, 0, 0, 0.3 ) 60%,
+			transparent
+		);
+		border-radius: 3px;
+
+		a {
+			color: inherit;
+		}
+
+		a:hover,
+		a:focus {
+			color:      $white;
+			background: rgba( 255, 255, 255, 0.2 );
+		}
+	}
+}

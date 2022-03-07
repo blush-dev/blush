@@ -1,0 +1,216 @@
+////
+/// Set up and define colors.
+///
+/// @group  Settings
+/// @author Justin Tadlock <justintadlock@gmail.com>
+/// @link   https://themehybrid.com/themes/exhale
+////
+
+$black: #22292f;
+$white: #ffffff;
+
+$gray-900: #1a202c;
+$gray-800: #2d3748;
+$gray-700: #4a5568;
+$gray-600: #718096;
+$gray-500: #a0aec0;
+$gray-400: #cbd5e0;
+$gray-300: #e2e8f0;
+$gray-200: #edf2f7;
+$gray-100: #f7fafc;
+
+$red-900: #742a2a;
+$red-800: #9b2c2c;
+$red-700: #c53030;
+$red-600: #e53e3e;
+$red-500: #f56565;
+$red-400: #fc8181;
+$red-300: #feb2b2;
+$red-200: #fed7d7;
+$red-100: #fff5f5;
+
+$orange-900: #7b341e;
+$orange-800: #9c4221;
+$orange-700: #c05621;
+$orange-600: #dd6b20;
+$orange-500: #ed8936;
+$orange-400: #f6ad55;
+$orange-300: #fbd38d;
+$orange-200: #feebc8;
+$orange-100: #fffaf0;
+
+$yellow-900: #744210;
+$yellow-800: #975a16;
+$yellow-700: #b7791f;
+$yellow-600: #d69e2e;
+$yellow-500: #ecc94b;
+$yellow-400: #f6e05e;
+$yellow-300: #faf089;
+$yellow-200: #fefcbf;
+$yellow-100: #fffff0;
+
+$green-900: #22543d;
+$green-800: #276749;
+$green-700: #2f855a;
+$green-600: #38a169;
+$green-500: #48bb78;
+$green-400: #68d391;
+$green-300: #9ae6b4;
+$green-200: #c6f6d5;
+$green-100: #f0fff4;
+
+$teal-900: #234e52;
+$teal-800: #285e61;
+$teal-700: #2c7a7b;
+$teal-600: #319795;
+$teal-500: #38b2ac;
+$teal-400: #4fd1c5;
+$teal-300: #81e6d9;
+$teal-200: #b2f5ea;
+$teal-100: #e6fffa;
+
+$blue-900: #2a4365;
+$blue-800: #2c5282;
+$blue-700: #2b6cb0;
+$blue-600: #3182ce;
+$blue-500: #4299e1;
+$blue-400: #63b3ed;
+$blue-300: #90cdf4;
+$blue-200: #bee3f8;
+$blue-100: #ebf8ff;
+
+$indigo-900: #3c366b;
+$indigo-800: #434190;
+$indigo-700: #4c51bf;
+$indigo-600: #5a67d8;
+$indigo-500: #667eea;
+$indigo-400: #7f9cf5;
+$indigo-300: #a3bffa;
+$indigo-200: #c3dafe;
+$indigo-100: #ebf4ff;
+
+$purple-900: #44337a;
+$purple-800: #553c9a;
+$purple-700: #6b46c1;
+$purple-600: #805ad5;
+$purple-500: #9f7aea;
+$purple-400: #b794f4;
+$purple-300: #d6bcfa;
+$purple-200: #e9d8fd;
+$purple-100: #faf5ff;
+
+$pink-900: #702459;
+$pink-800: #97266d;
+$pink-700: #b83280;
+$pink-600: #d53f8c;
+$pink-500: #ed64a6;
+$pink-400: #f687b3;
+$pink-300: #fbb6ce;
+$pink-200: #fed7e2;
+$pink-100: #fff5f7;
+
+/// Returns a map of block colors in name-value format. These are the colors
+/// defined via the `editor-color-palette` setting in `app/functions-setup.php`
+/// for the WordPress editor.
+///
+/// @since  1.0.0
+/// @access public
+/// @return {map}  Map of defined colors.
+
+@function colors() {
+
+	@return (
+	        'black' : $black,
+	        'white' : $white,
+	        'gray-900' : $gray-900,
+	        'gray-800' : $gray-800,
+	        'gray-700' : $gray-700,
+	        'gray-600' : $gray-600,
+	        'gray-500' : $gray-500,
+	        'gray-400' : $gray-400,
+	        'gray-300' : $gray-300,
+	        'gray-200' : $gray-200,
+	        'gray-100' : $gray-100,
+	        'red-900' : $red-900,
+	        'red-800' : $red-800,
+	        'red-700' : $red-700,
+	        'red-600' : $red-600,
+	        'red-500' : $red-500,
+	        'red-400' : $red-400,
+	        'red-300' : $red-300,
+	        'red-200' : $red-200,
+	        'red-100' : $red-100,
+	        'orange-900' : $orange-900,
+	        'orange-800' : $orange-800,
+	        'orange-700' : $orange-700,
+	        'orange-600' : $orange-600,
+	        'orange-500' : $orange-500,
+	        'orange-400' : $orange-400,
+	        'orange-300' : $orange-300,
+	        'orange-200' : $orange-200,
+	        'orange-100' : $orange-100,
+	        'yellow-900' : $yellow-900,
+	        'yellow-800' : $yellow-800,
+	        'yellow-700' : $yellow-700,
+	        'yellow-600' : $yellow-600,
+	        'yellow-500' : $yellow-500,
+	        'yellow-400' : $yellow-400,
+	        'yellow-300' : $yellow-300,
+	        'yellow-200' : $yellow-200,
+	        'yellow-100' : $yellow-100,
+	        'green-900' : $green-900,
+	        'green-800' : $green-800,
+	        'green-700' : $green-700,
+	        'green-600' : $green-600,
+	        'green-500' : $green-500,
+	        'green-400' : $green-400,
+	        'green-300' : $green-300,
+	        'green-200' : $green-200,
+	        'green-100' : $green-100,
+	        'teal-900' : $teal-900,
+	        'teal-800' : $teal-800,
+	        'teal-700' : $teal-700,
+	        'teal-600' : $teal-600,
+	        'teal-500' : $teal-500,
+	        'teal-400' : $teal-400,
+	        'teal-300' : $teal-300,
+	        'teal-200' : $teal-200,
+	        'teal-100' : $teal-100,
+	        'blue-900' : $blue-900,
+	        'blue-800' : $blue-800,
+	        'blue-700' : $blue-700,
+	        'blue-600' : $blue-600,
+	        'blue-500' : $blue-500,
+	        'blue-400' : $blue-400,
+	        'blue-300' : $blue-300,
+	        'blue-200' : $blue-200,
+	        'blue-100' : $blue-100,
+	        'indigo-900' : $indigo-900,
+	        'indigo-800' : $indigo-800,
+	        'indigo-700' : $indigo-700,
+	        'indigo-600' : $indigo-600,
+	        'indigo-500' : $indigo-500,
+	        'indigo-400' : $indigo-400,
+	        'indigo-300' : $indigo-300,
+	        'indigo-200' : $indigo-200,
+	        'indigo-100' : $indigo-100,
+	        'purple-900' : $purple-900,
+	        'purple-800' : $purple-800,
+	        'purple-700' : $purple-700,
+	        'purple-600' : $purple-600,
+	        'purple-500' : $purple-500,
+	        'purple-400' : $purple-400,
+	        'purple-300' : $purple-300,
+	        'purple-200' : $purple-200,
+	        'purple-100' : $purple-100,
+	        'pink-900' : $pink-900,
+	        'pink-800' : $pink-800,
+	        'pink-700' : $pink-700,
+	        'pink-600' : $pink-600,
+	        'pink-500' : $pink-500,
+	        'pink-400' : $pink-400,
+	        'pink-300' : $pink-300,
+	        'pink-200' : $pink-200,
+	        'pink-100' : $pink-100
+	);
+}
