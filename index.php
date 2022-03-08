@@ -21,16 +21,6 @@ require_once 'vendor/autoload.php';
 $app = new Application( __DIR__ );
 
 # ------------------------------------------------------------------------------
-# Register service providers with the application.
-# ------------------------------------------------------------------------------
-#
-# Before booting the application, add any service providers that are necessary
-# for running it. Service providers are essentially the backbone of the
-# bootstrapping process.
-
-// $app->provider( ServiceProviderExample::class );
-
-# ------------------------------------------------------------------------------
 # Bootstrap the application.
 # ------------------------------------------------------------------------------
 #

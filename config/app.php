@@ -13,5 +13,8 @@ return [
 
 	// Select from a list of supported timezones:
 	// https://www.php.net/manual/en/timezones.php
-	'timezone' => 'America/Chicago'
+	'timezone' => 'America/Chicago',
+
+	// Register service providers.
+	'providers' => []
 ];
