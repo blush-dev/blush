@@ -17,9 +17,9 @@
 
 		if ( 2 < $current ) :
 			$page = $current - 1;
-			$uri = Blush\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page;
+			$uri = Blush\App::resolve( 'uri' ) . rtrim( $request, '/' ) . '/page/' . $page;
 		else :
-			$uri = Blush\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
+			$uri = Blush\App::resolve( 'uri' ) . rtrim( $request, '/' );
 		endif; ?>
 
 		<li class="pagination__item pagination__item--prev inline-block text-base font-600">
@@ -44,9 +44,9 @@
 
 
 				if ( 1 != $i ) :
-					$uri = Blush\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $i;
+					$uri = Blush\App::resolve( 'uri' ) . rtrim( $request, '/' ) . '/page/' . $i;
 				else :
-					$uri = Blush\App::resolve( 'uri/relative' ) . rtrim( $request, '/' );
+					$uri = Blush\App::resolve( 'uri' ) . rtrim( $request, '/' );
 				endif; ?>
 
 				<li class="pagination__item pagination__item--num inline-block text-base font-600">
@@ -71,7 +71,7 @@
 	if ( $current < $total ) :
 
 		$page = $current + 1;
-		$uri = Blush\App::resolve( 'uri/relative' ) . rtrim( $request, '/' ) . '/page/' . $page; ?>
+		$uri = Blush\App::resolve( 'uri' ) . rtrim( $request, '/' ) . '/page/' . $page; ?>
 
 		<li class="pagination__item pagination__item--next inline-block text-base font-600">
 			<a class="pagination__anchor pagination__anchor--link block py-3 px-6 border border-gray-200 no-underline hover:underline" href="<?= e( $uri ) ?>">Next &rarr;</a>
