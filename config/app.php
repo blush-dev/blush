@@ -15,6 +15,12 @@ return [
 	// https://www.php.net/manual/en/timezones.php
 	'timezone' => 'America/Chicago',
 
+	// Set the homepage to show a custom content type collection. This
+	// should be the content type name/type (e.g., `post`) set in the
+	// `/config/content.php` configuration file.  Leave empty to show the
+	// normal homepage.
+	'home_alias' => '',
+
 	// Register service providers.
 	'providers' => []
 ];

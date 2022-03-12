@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/blush-dev/framework.git",
-                "reference": "a8cbd55e165f7f6bd977fd012dec2fe407cb3cab"
+                "reference": "2b50e7736e43d44fae8201f9d5f1bca1ad54cc56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blush-dev/framework/zipball/a8cbd55e165f7f6bd977fd012dec2fe407cb3cab",
-                "reference": "a8cbd55e165f7f6bd977fd012dec2fe407cb3cab",
+                "url": "https://api.github.com/repos/blush-dev/framework/zipball/2b50e7736e43d44fae8201f9d5f1bca1ad54cc56",
+                "reference": "2b50e7736e43d44fae8201f9d5f1bca1ad54cc56",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 "issues": "https://github.com/blush-dev/framework/issues",
                 "source": "https://github.com/blush-dev/framework/tree/master"
             },
-            "time": "2022-03-09T05:18:06+00:00"
+            "time": "2022-03-12T11:03:06+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

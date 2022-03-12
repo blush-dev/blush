@@ -7,6 +7,18 @@ return [
 	// @todo Go in a `.env` file?
 	'secret_key' => 'abc123',
 
+	// Exclude metadata (frontmatter) from being cached. This will keep
+	// cached file sizes smaller. Note that meta used for sorting queries,
+	// such as `title`, `date`, and taxonomy content types, should be
+	// cached. The below sets up some sensible defaults, but customize to
+	// suit your project.
+	'content_exclude_meta' => [
+		'excerpt',
+		'image',
+		'collection',
+		'view'
+	],
+
 	// Enable/Disable full-page file cache. Data is still cached with this
 	// disabled. However, with this enabled, the final page HTML served to
 	// the browser is cached, too.

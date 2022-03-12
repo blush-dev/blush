@@ -1,4 +1,4 @@
-<?php if ( $entries->total() > $entries->count() ) :
+<?php if ( $collection->total() > $collection->count() ) :
 
 	$request = preg_replace( '/\/page\/\d+/', '', \Blush\App::resolve( 'router' )->path() );
 
@@ -7,7 +7,7 @@
 	$current = intval( $data['page'] );
 	$end_size = 1;
 	$mid_size = 1;
-	$total = ceil( $entries->total() / $entries->number() ); ?>
+	$total = ceil( $collection->total() / $collection->number() ); ?>
 
 	<nav class="pagination clear mt-8 text-center">
 
@@ -28,7 +28,7 @@
 
 	<?php endif; ?>
 
-	<?php for ( $i = 1; $i <= ceil( $entries->total() / $entries->number() ); $i++ ) : ?>
+	<?php for ( $i = 1; $i <= ceil( $collection->total() / $collection->number() ); $i++ ) : ?>
 
 		<?php if ( $current === $i ) : ?>
 

@@ -1,53 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php
-		$route = Blush\App::resolve( 'router' )->path();
-		$paged = '';
-		$title_tag = 'p';
-
-		if ( false !== strpos( $route, 'page/{number}' ) ) {
-			$p = explode( '/', Blush\App::resolve( 'request' )->uri() );
-			$paged = ': Page ' . e( array_pop( $p ) );
-		}
-
-		if ( '/' === $route || 'page/{number}' === $route ) {
-			echo ! empty( $title ) ? e( $title ) . $paged : config( 'app', 'title' );
-			$title_tag = 'h1';
-		} else {
-			echo ! empty( $title ) ? e( $title ) . $paged . ' &mdash; ' . config( 'app', 'title' ) : config( 'app', 'title' );
-		}
-	?></title>
+	<?= $doctitle ? $doctitle->toHtml() : '' ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400;1,700&family=Indie+Flower&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="<?= e( uri( 'public/css/screen.css ' ) ) ?>" />
-	<?php if ( ! empty( $query ) ) :
-		if ( $desc = $query->meta( 'description' ) ) :
-	?><meta name="description" value="<?= e( $desc ) ?>" />
-	<?php elseif ( $desc = $query->excerpt( 40, '' ) ) :
-			$desc = strip_tags( $desc );
-			$desc = str_replace( [ "\n", "\r", "\t" ], ' ', $desc );
-			$desc = e( $desc );
-			$desc = 260 > strlen( $desc ) ? substr( $desc, 0, 260 ) . '&hellip;' : $desc;
-	?><meta name="description" value="<?= trim( $desc ) ?>" />
-	<meta property="og:description" content="<?= trim( $desc ) ?>" />
-		<?php endif;
-		if ( $keywords = $query->meta( 'keywords' ) ) :
-?>
-	<meta name="keywords" value="<?= e( $keywords ) ?>" />
-<?php endif;
-		if ( $thumbnail = $query->meta( 'thumbnail' ) ) :
-			$thumbnail = false === strpos( $thumbnail, 'http://' ) ? "http://justintadlock.com{$thumbnail}" : $thumbnail; ?>
-	<meta property="og:image" content="<?= e( $thumbnail ) ?>" />
-	<meta name="twitter:image" content="<?= e( $thumbnail ) ?>" />
-	<meta name="twitter:card" content="summary_large_image" />
-<?php endif;
-endif; ?>
-	<meta name="twitter:creator" content="@justintadlock" />
-	<meta name="twitter:site" content="@justintadlock" />
-	<meta name="twitter:text:title" content="<?= ! empty( $title ) ? e( $title ) : 'Justin Tadlock' ?>" />
-	<meta name="theme-color" content="#2b6cb0;">
-	<link rel="alternate" type="application/rss+xml" title="Justin Tadlock Feed" href="http://feeds.feedburner.com/JustinTadlock" />
 </head>
 <body>
 
@@ -56,9 +13,9 @@ endif; ?>
 	<header class="app-header sticky md:static z-40 top-0 flex flex-wrap items-center justify-between w-full h-auto bg-white border-blue-200 border-t-2">
 
 		<div class="app-header__branding overflow-hidden flex justify-start items-center md:flex-grow-0 max-w-full h-16 px-8 text-center">
-			<<?= e( $title_tag ) ?> class="app-header__title m-0 font-secondary font-400 text-3xl leading-none">
-				<a class="app-header__title-link text-gray-700 no-underline hover:underline border-0" href="<?= e( uri() ) ?>"><?= config( 'app', 'title' ) ?></a>
-			</<?= e( $title_tag ) ?>>
+			<h1 class="app-header__title m-0 font-secondary font-400 text-3xl leading-none">
+				<a class="app-header__title-link text-gray-700 no-underline hover:underline border-0" href="<?= e( uri() ) ?>"><?= e( config( 'app', 'title' ) ) ?></a>
+			</h1>
 		</div>
 
 		<div class="toggle toggle--menu-primary block md:hidden h-16 px-8 flex items-center">
