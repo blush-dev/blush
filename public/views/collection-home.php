@@ -7,7 +7,7 @@
 			<?php $engine->each( 'parts/entry-summary', $collection->all(), 'entry' ) ?>
 		</div>
 
-		<?php $engine->include( 'parts/pagination' ) ?>
+		<?php $engine->includeWhen( isset( $pagination ), 'parts/pagination' ) ?>
 
 	</main>
 </div>
