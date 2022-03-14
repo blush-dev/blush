@@ -22,5 +22,8 @@ return [
 	'home_alias' => '',
 
 	// Register service providers.
-	'providers' => []
+	'providers' => [],
+
+	// Register static proxies classes.
+	'proxies' => []
 ];
