@@ -6,7 +6,7 @@
 		<?php $engine->includeWhen( isset( $single ), 'parts/collection-header' ) ?>
 
 		<div class="collection-list o-content-width mt-16">
-			<?php $engine->each( 'parts/entry-summary', $collection->all(), 'entry' ) ?>
+			<?php $engine->each( 'parts/entry-summary', $collection, 'entry' ) ?>
 		</div>
 
 		<?php $engine->includeWhen( isset( $pagination ), 'parts/pagination' ) ?>
