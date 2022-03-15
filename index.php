@@ -33,9 +33,7 @@ $app->boot();
 # Run the application.
 # ------------------------------------------------------------------------------
 #
-# Handles the current request and sends the response back to the browser.
-#
-# @todo This will use the Symfony HTTP Kernel in the future.
-# @link https://symfony.com/doc/current/components/http_kernel.html
+# Get the router, which handles the current request, and send the response back
+# to the browser.
 
-$app->router->response()->send();
+$app->make( 'routing.router' )->response()->send();
