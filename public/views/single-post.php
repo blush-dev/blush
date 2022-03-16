@@ -13,13 +13,13 @@
 			</div>
 
 			<footer class="entry__footer clear max-w-2xl mx-8 sm:mx-auto my-8 text-gray-600 font-secondary text-xl">
-				<?php if ( $single->terms( 'tag' ) ) : ?>
-					<span class="entry__topics">
+				<?php if ( $tags = $single->terms( 'tag' ) ) : ?>
+					<div class="entry__tags">
 						Tagged:
-						<?php foreach ( $single->terms( 'tag' ) as $term ) : ?>
-							<a class="mx-1 border-0 no-underline hover:underline" href="<?= e( $term->uri() ) ?>">#<?= e( $term->title() ) ?></a>
+						<?php foreach ( $tags as $tag ) : ?>
+							<a class="mx-1 border-0 no-underline hover:underline" href="<?= e( $tag->uri() ) ?>">#<?= e( $tag->title() ) ?></a>
 						<?php endforeach ?>
-					</span>
+					</div>
 				<?php endif ?>
 			</footer>
 
