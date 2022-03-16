@@ -10,11 +10,13 @@
 return [
 	// Create custom content type and taxonomy for blog posts.
 	'post' => [
-		'path' => 'blog'
+		'path'       => 'blog',
+		'collection' => [ 'order' => 'desc' ]
 	],
 	'tag' => [
-		'path'         => 'blog/tags',
-		'taxonomy'     => true,
-		'term_collect' => 'post'
+		'path'            => 'blog/tags',
+		'taxonomy'        => true,
+		'term_collect'    => 'post',
+		'term_collection' => [ 'order' => 'desc' ]
 	]
 ];
