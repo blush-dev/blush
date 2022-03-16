@@ -3,7 +3,7 @@
 
 return [
 	// URL to the site.
-	'uri' => 'http://localhost/blush',
+	'uri' => env( 'APP_URI', 'http://localhost' ),
 
 	// A custom title for the site.
 	'title' => 'Blush',

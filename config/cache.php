@@ -5,7 +5,7 @@ return [
 	// Secret key used for purging the cache.
 	// yoursite.com/cache/purge/{$secret_key}
 	// @todo Go in a `.env` file?
-	'secret_key' => 'abc123',
+	'secret_key' => env( 'PURGE_KEY' ),
 
 	// Exclude metadata (frontmatter) from being cached. This will keep
 	// cached file sizes smaller. Note that meta used for sorting queries,
