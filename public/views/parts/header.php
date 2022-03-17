@@ -14,7 +14,7 @@
 
 		<div class="app-header__branding overflow-hidden flex justify-start items-center md:flex-grow-0 max-w-full h-16 px-8 text-center">
 			<h1 class="app-header__title m-0 font-secondary font-400 text-3xl leading-none">
-				<a class="app-header__title-link text-gray-700 no-underline hover:underline border-0" href="<?= e( uri() ) ?>"><?= e( config( 'app', 'title' ) ) ?></a>
+				<a class="app-header__title-link text-gray-700 no-underline hover:underline border-0" href="<?= e( uri() ) ?>"><?= e( config( 'app.title' ) ) ?></a>
 			</h1>
 		</div>
 
