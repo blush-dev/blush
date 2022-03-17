@@ -1,6 +1,7 @@
 RewriteEngine on
 
-RewriteBase /blush/
+# Uncomment the below and change the rewrite base if site is at different URL.
+# RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ $1 [L,R]
