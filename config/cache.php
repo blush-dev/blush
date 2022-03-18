@@ -2,10 +2,11 @@
 # Cache configuration.
 
 return [
-	// Secret key used for purging the cache.
-	// yoursite.com/cache/purge/{$secret_key}
-	// @todo Go in a `.env` file?
-	'secret_key' => env( 'PURGE_KEY' ),
+	// Key used for purging the cache.
+	// yoursite.com/purge/cache/{$key}
+	// yoursite.com/purge/cache/content/{$key}
+	// yoursite.com/purge/cache/global/{$key}
+	'purge_key' => env( 'PURGE_KEY' ),
 
 	// Exclude metadata (frontmatter) from being cached. This will keep
 	// cached file sizes smaller. Note that meta used for sorting queries,
@@ -26,7 +27,11 @@ return [
 
 	// Exclude paths (relative to site URI) from the global cache.
 	// This will also exclude child paths (e.g., `a/b` excludes `a/b/c`).
-	'global_exclude' => [
-		'cache/purge'
-	]
+	'global_exclude' => [],
+
+	// Advanced usage.  Define custom cache stores.
+	'stores' => [],
+
+	// Advanced usage.  Define custom cache drivers.
+	'drivers' => []
 ];
