@@ -5,11 +5,11 @@ return [
 	// URL to the site.
 	'uri' => env( 'APP_URI', 'http://localhost' ),
 
-	// A custom title for the site.
+	// Custom title for the site.
 	'title' => 'Blush',
 
-	// Custom description/tagline for the site.
-	'description' => 'Yet another good morning',
+	// Custom tagline for the site.
+	'tagline' => 'Yet another good morning',
 
 	// Select from a list of supported timezones:
 	// https://www.php.net/manual/en/timezones.php
