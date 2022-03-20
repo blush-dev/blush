@@ -15,6 +15,11 @@ return [
 	// https://www.php.net/manual/en/timezones.php
 	'timezone' => 'America/Chicago',
 
+	// Select from a list of supported date and time formats:
+	// https://www.php.net/manual/en/datetime.formats.date.php
+	'date_format' => 'F j, Y',
+	'time_format' => 'g:i a',
+
 	// Set the homepage to show a custom content type collection. This
 	// should be the content type name/type (e.g., `post`) set in the
 	// `/config/content.php` configuration file.  Leave empty to show the
