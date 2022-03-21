@@ -1,8 +1,23 @@
 {
 	"name"        : "blush-dev/blush",
+	"description" : "Blush App: Forkable project package for running the Blush CMS.",
+	"keywords"    : [ "cms" ],
+	"homepage"    : "https://github.com/blush-dev/blush",
+	"license"     : "GPL-2.0-or-later",
+	"authors"     : [
+		{
+			"name"     : "Justin Tadlock",
+			"email"    : "justintadlock@gmail.com",
+			"homepage" : "http://justintadlock.com",
+			"role"     : "Developer"
+		}
+	],
+	"support"     : {
+		"issues" : "https://github.com/blush-dev/blush/issues"
+	},
 	"autoload"    : {
 		"psr-4" : {
-			"App\\" : "src/"
+			"App\\" : "app/"
 		}
 	},
 	"require": {

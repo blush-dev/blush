@@ -5,6 +5,9 @@
 		<article class="entry entry--single">
 
 			<header class="entry__header max-w-2xl mx-8 sm:mx-auto">
+				<div class="entry__byline text-gray-600 font-secondary">
+					<?= e( $single->date() ) ?>
+				</div>
 				<h1 class="entry__title m-0"><span class="highlight"><?= e( $single->title() ) ?></span></h1>
 			</header>
 
