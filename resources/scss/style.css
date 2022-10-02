@@ -1,0 +1,8 @@
+/**
+ * This file is intended to be the source for the site's primary stylesheet, and
+ * the build associated with it at `/public/css/style.css`.  However, Blush
+ * imposes no restrictions on how you build your front-end design nor does it
+ * require any particular build tools.  It does provide some convenient helper
+ * functions for accessing the available paths via `public_uri|path()` and
+ * `resource_uri|path()` if needed.
+ */
